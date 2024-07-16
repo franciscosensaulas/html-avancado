@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nao-recomendado.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <button class="toggle-button" onclick="toggle('hardware')">Hardware</button>
+                <ul class="hidden-items" id="hardware">
+                    <li>Coolers</li>
+                    <li>Fonte</li>
+                    <li>Memória RAM</li>
+                    <li>Placa de Vídeo</li>
+                    <li>Placa Mãe</li>
+                    <li>Processador</li>
+                </ul>
+            </li>
+            <li>
+                <button class="toggle-button">Periféricos</button>
+                <ul class="hidden-items">
+                    <li>Headset</li>
+                    <li>Monitor</li>
+                    <li>Mouse</li>
+                    <li>Teclado</li>
+                </ul>
+            </li>
+            <li>
+                <button class="toggle-button">TVs</button>
+                <ul class="hidden-items">
+                    <li>LG</li>
+                    <li>Samsung</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        function toggle(elementId) {
+            let elemento = document.getElementById(elementId);
+            if (elemento.style.display === "none" || elemento.style.display === "") {
+                elemento.style.display = "block";
+            } else {
+                elemento.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
